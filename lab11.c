@@ -27,7 +27,7 @@ int main(void)
 {
   struct pair p = {.a = 0, .b = N*2};
   printf("a=%d, b=%d, a+b=%d\n", p.a, p.b, p.a + p.b);
-#define NW ((2))
+#define NW ((4))
   pthread_t pts[NW]; // two workers
   for (int i = 0 ; i < NW; i++)
     pthread_create(&pts[i], NULL, worker, &p);
